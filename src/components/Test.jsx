@@ -5,11 +5,6 @@ import Axios from 'axios';
 // const myImage = '手燈' ///取得classNAME
 // let NewImage = require('../imag/Japan/' + myImage + '.jpg');
 
-
-
-
-
-
 class Test extends Component {
     state = {
         product: [
@@ -19,7 +14,7 @@ class Test extends Component {
         ]
     }
     async componentDidMount() {
-        var result = await Axios.get("http://localhost:8000/todo/class");
+        var result = await Axios.get("http://localhost:8000/nation/Japan");
         this.state.product = result.data;
         // console.log((this.state.product));
         this.setState({});
@@ -36,8 +31,8 @@ class Test extends Component {
 
                         <div key={index}>
                             <div>
-                                {item.className}
-                                <img src={require('../imag/Japan/' + item.className + '.jpg')} />
+                                {console.log(item.productName)}
+                                <img src={require('../imag/Japan/' + item.productName + '.jpg')} />
                             </div>
 
                         </div>

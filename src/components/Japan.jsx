@@ -5,7 +5,7 @@ import Axios from 'axios';
 // const myImage = '手燈' ///取得classNAME
 // let NewImage = require('../imag/Japan/' + myImage + '.jpg');
 
-class Test extends Component {
+class Japan extends Component {
     state = {
         product: [
             // { classID: '1', className: 'AAA' },
@@ -32,7 +32,8 @@ class Test extends Component {
                         <div key={index}>
                             <div>
                                 {console.log(item.productName)}
-                                <img src={require('../imag/Japan/' + item.productName + '.jpg')} />
+                                <a href="https://www.youtube.com/"><img src={require('../imag/Japan/' + item.productName + '.jpg')} /></a>
+                                
                             </div>
 
                         </div>
@@ -46,4 +47,4 @@ class Test extends Component {
     }
 }
 
-export default Test;
+export default Japan;

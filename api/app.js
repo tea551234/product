@@ -31,6 +31,16 @@ app.get("/nation/Japan", function (req, res) {
     )
 })
 
+
+
+app.get("/nation/Japan/todo/:id", function (req, res) {
+    conn.query("SELECT * FROM `product` WHERE `nationID` = 1 AND `productID`=?" , [req.params.id],
+        function (err, rows) {
+            res.send( JSON.stringify(rows) );
+        }
+    )
+})
+
 app.get("/todo/item/:id", function (req, res) {
     conn.query("select * from todoTable where todoTableId = ?", 
         [req.params.id],
